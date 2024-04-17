@@ -8,20 +8,22 @@ module.exports = {
 	},
 	daisyui: {
 		themes: [
-			'light',
-			'pastel',
 			'lofi',
+			'autumn',
+			'pastel',
 			'nord',
-			'cyberpunk',
-			'retro',
+			'lemonade',
 			'aqua',
+			'synthwave',
 			'forest',
 			'coffee',
 			'dracula',
-			'dark',
+			'luxury',
 			'black'
 		], // false: only light + dark | true: all themes | array: specific themes
+		theme: 'auto', // 'auto' | 'light' | 'dark'
 		darkTheme: 'dracula', // name of one of the included themes for dark mode
+		lightTheme: 'pastel', // name of one of the included themes for light mode
 		base: true, // applies background color and foreground color for root element by default
 		styled: true, // include daisyUI colors and design decisions for all components
 		utils: true, // adds responsive and modifier utility classes
