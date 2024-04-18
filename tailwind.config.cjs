@@ -7,20 +7,7 @@ module.exports = {
 		}
 	},
 	daisyui: {
-		themes: [
-			'lofi',
-			'autumn',
-			'pastel',
-			'nord',
-			'lemonade',
-			'aqua',
-			'synthwave',
-			'forest',
-			'coffee',
-			'dracula',
-			'luxury',
-			'black'
-		], // false: only light + dark | true: all themes | array: specific themes
+		themes: true, // false: only light + dark | true: all themes | array: specific themes
 		theme: 'auto', // 'auto' | 'light' | 'dark'
 		darkTheme: 'dracula', // name of one of the included themes for dark mode
 		lightTheme: 'pastel', // name of one of the included themes for light mode
