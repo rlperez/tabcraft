@@ -7,6 +7,7 @@ export interface Themes {
 
 export interface ColorScheme {
 	name: string;
+	scheme: 'dark' | 'light';
 	primary: string;
 	secondary: string;
 	accent: string;
@@ -30,6 +31,7 @@ export interface DaisyThemes {
 		'base-300': string;
 	};
 }
+
 const typedThemes: DaisyThemes = daisyThemes as unknown as DaisyThemes;
 
 const { dark, light } = Object.entries(typedThemes).reduce(
@@ -45,9 +47,9 @@ const { dark, light } = Object.entries(typedThemes).reduce(
 );
 
 const daisyThemeToThemes = (themeName: string, theme: DaisyThemes[string]) => {
-	console.log(theme);
 	return {
 		name: themeName,
+		scheme: theme['color-scheme'],
 		primary: theme.primary,
 		secondary: theme.secondary,
 		accent: theme.accent,
