@@ -6,3 +6,15 @@
 details > summary {
 	list-style: none;
 }
+
+div.theme-card {
+	@apply border border-transparent rounded-xl overflow-hidden;
+}
+
+div.theme-card > div.card-body {
+	@apply bg-base-100;
+}
+
+div.theme-card > div.card-body > p.theme-card-name {
+	@apply uppercase text-center text-sm font-semibold;
+}
