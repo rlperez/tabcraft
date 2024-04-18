@@ -25,7 +25,7 @@
 								<div class="divider divider-end text-sm font-bold uppercase">Light</div>
 							</div>
 						</div>
-						<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 p-4">
+						<div class="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 p-4">
 							{#each themes.light as theme}
 								<Theme {theme} />
 							{/each}
@@ -35,7 +35,7 @@
 								<div class="divider divider-end text-sm font-bold uppercase">Dark</div>
 							</div>
 						</div>
-						<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 p-4">
+						<div class="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 p-4">
 							{#each themes.dark as theme}
 								<Theme {theme} />
 							{/each}
