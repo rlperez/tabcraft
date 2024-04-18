@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import type { ColorScheme } from '../../stores/theme_config_store';
 	export let theme: ColorScheme;
 
