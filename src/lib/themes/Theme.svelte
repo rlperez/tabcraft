@@ -4,9 +4,9 @@
 
 	const getBgColor = (theme: ColorScheme) => {
 		if (theme.scheme === 'dark') {
-			return 'bg-gray-100';
+			return 'var(--dark-theme-gray)';
 		}
-		return 'white';
+		return 'var(--light-theme-white';
 	};
 	const defaultBgColor = getBgColor(theme);
 </script>
