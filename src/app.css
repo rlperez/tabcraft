@@ -12,6 +12,10 @@ details > summary {
 	list-style: none;
 }
 
+div.theme-card:active {
+    @apply scale-95;
+}
+
 div.theme-card:hover, div.theme-card:active {
     border-bottom-color: var(--bg-accent);
 	border-right-color: var(--bg-accent);
