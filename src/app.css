@@ -3,12 +3,22 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--dark-theme-gray: #2A323C;
+	--light-theme-white: #FAF7F9;
+}
+
 details > summary {
 	list-style: none;
 }
 
+div.theme-card:hover, div.theme-card:active {
+    border-bottom-color: var(--bg-accent);
+	border-right-color: var(--bg-accent);
+}
+
 div.theme-card {
-	@apply border border-transparent rounded-xl overflow-hidden;
+	@apply rounded-xl overflow-hidden border-b-4 border-r-2 border-transparent drop-shadow-md;
 }
 
 div.theme-card > div.card-body {
@@ -16,5 +26,5 @@ div.theme-card > div.card-body {
 }
 
 div.theme-card > div.card-body > p.theme-card-name {
-	@apply uppercase text-center text-sm font-semibold;
+	@apply uppercase text-center text-sm font-semibold px-1;
 }
