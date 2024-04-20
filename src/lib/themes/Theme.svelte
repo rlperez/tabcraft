@@ -11,8 +11,8 @@
 	const defaultBgColor = getBgColor(theme);
 </script>
 
-<div class="theme-card card">
-	<figure class="theme-card-figure h-full">
+<div class="theme-card">
+	<figure class="theme-card-figure">
 		<div class="grid grid-cols-4 gap-0 w-full">
 			<div style="background-color: {theme.primary ? theme.primary : defaultBgColor}">&nbsp;</div>
 			<div class="" style="background-color: {theme.base ? theme.base : defaultBgColor}">
