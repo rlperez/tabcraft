@@ -9,10 +9,10 @@
 </script>
 
 {#each themeCollection as theme}
-	<Theme
-		{theme}
+	<button
 		on:click={() => {
 			handleThemeChange(theme);
 		}}
-	/>
+		><Theme {theme} />
+	</button>
 {/each}
