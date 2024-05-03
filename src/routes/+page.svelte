@@ -1,6 +1,5 @@
 <script lang="ts">
-	import Theme from '../lib/themes/Theme.svelte';
-	import { themes } from '../stores/theme_config_store';
+	import ThemeSelector from '../lib/themes/ThemeSelector.svelte';
 </script>
 
 <header class="h-12">
@@ -26,9 +25,7 @@
 							</div>
 						</div>
 						<div class="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 p-4">
-							{#each themes.light as theme}
-								<Theme {theme} />
-							{/each}
+							<ThemeSelector scheme="light" />
 						</div>
 						<div class="px-4">
 							<div class="flex flex-col w-full">
@@ -36,9 +33,7 @@
 							</div>
 						</div>
 						<div class="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 p-4">
-							{#each themes.dark as theme}
-								<Theme {theme} />
-							{/each}
+							<ThemeSelector scheme="dark" />
 						</div>
 					</div>
 				</div>
