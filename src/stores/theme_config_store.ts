@@ -1,5 +1,9 @@
 import * as daisyThemes from 'daisyui/src/theming/themes';
 
+import { browser } from '$app/environment';
+
+import { writable } from 'svelte/store';
+
 export interface Themes {
 	dark: ColorScheme[];
 	light: ColorScheme[];
@@ -65,3 +69,16 @@ export const themes: Themes = {
 	dark: dark.map(({ themeName, ...rest }) => daisyThemeToThemes(themeName, rest)),
 	light: light.map(({ themeName, ...rest }) => daisyThemeToThemes(themeName, rest))
 };
+
+const defaultValue = 'dark';
+
+const initialValue = browser ? window.localStorage.getItem('theme') ?? defaultValue : defaultValue;
+
+export const theme = writable<string>(initialValue);
+
+theme.subscribe((value) => {
+	if (browser) {
+		window.localStorage.setItem('theme', value);
+		document.documentElement.setAttribute('data-theme', value);
+	}
+});
