@@ -1,7 +1,5 @@
 import * as daisyThemes from 'daisyui/src/theming/themes';
-
 import { browser } from '$app/environment';
-
 import { writable } from 'svelte/store';
 
 export interface Themes {

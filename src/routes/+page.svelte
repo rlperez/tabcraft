@@ -1,12 +1,13 @@
 <script lang="ts">
 	import ThemeSelector from '../lib/themes/ThemeSelector.svelte';
+	let detailsElement: HTMLDetailsElement;
 </script>
 
 <header class="h-12">
 	<div class="w-full navbar">
 		<div class="flex-1"></div>
 		<div class="flex-none space-x-1 my-8">
-			<details>
+			<details bind:this={detailsElement}>
 				<summary>
 					<span class="ghost btn btn-sm btn-circle"><i class="fa-solid fa-palette"></i></span>
 				</summary>
@@ -15,6 +16,11 @@
 						class="flex-auto rounded-3xl bg-base-300 text-sm leading-6 shadow-lg ring-1 ring-base-100 w-2/3"
 					>
 						<div class="px-4 pt-4">
+							<button
+								class="ghost btn btn-sm btn-circle float-right"
+								on:click={() => (detailsElement.open = false)}
+								><i class="fa-solid fa-circle-xmark"></i></button
+							>
 							<div class="flex flex-col w-full">
 								<div class="divider divider-start text-lg font-bold">Themes</div>
 							</div>
