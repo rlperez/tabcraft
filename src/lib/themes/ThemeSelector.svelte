@@ -5,7 +5,7 @@
 	export let scheme: ColorScheme['scheme'] | undefined;
 	const themeCollection: ColorScheme[] = scheme
 		? themes[scheme]
-		: [...themes.light, ...themes.dark];
+		: [...themes.light, ...themes.dark].sort((a, b) => a.name.localeCompare(b.name));
 </script>
 
 {#each themeCollection as theme}

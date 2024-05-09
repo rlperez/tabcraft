@@ -64,8 +64,12 @@ const daisyThemeToThemes = (themeName: string, theme: DaisyThemes[string]) => {
 };
 
 export const themes: Themes = {
-	dark: dark.map(({ themeName, ...rest }) => daisyThemeToThemes(themeName, rest)),
-	light: light.map(({ themeName, ...rest }) => daisyThemeToThemes(themeName, rest))
+	dark: dark
+		.map(({ themeName, ...rest }) => daisyThemeToThemes(themeName, rest))
+		.sort((a, b) => a.name.localeCompare(b.name)),
+	light: light
+		.map(({ themeName, ...rest }) => daisyThemeToThemes(themeName, rest))
+		.sort((a, b) => a.name.localeCompare(b.name))
 };
 
 const defaultValue = 'dark';
