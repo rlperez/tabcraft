@@ -4,8 +4,29 @@
 @tailwind utilities;
 
 :root {
-	--dark-theme-gray: #2A323C;
-	--light-theme-white: #FAF7F9;
+	--dark-theme-gray: #2a323c;
+	--light-theme-white: #faf7f9;
+	--primary-color: oklch(var(--p));
+	--primary-content-color: oklch(var(--pc));
+	--secondary-color: oklch(var(--s));
+	--secondary-content-color: oklch(var(--sc));
+	--accent-color: oklch(var(--a));
+	--accent-content-color: oklch(var(--ac));
+	--neutral-color: oklch(var(--n));
+	--neutral-content-color: oklch(var(--nc));
+	--bg-accent: var(--bg-accent);
+	--base-color-100: oklch(var(--b1));
+	--base-color-200: oklch(var(--b2));
+	--base-color-300: oklch(var(--b3));
+	--base-content-color: oklch(var(--bc));
+	--info-color: oklch(var(--in));
+	--info-content-color: oklch(var(--inc));
+	--success-color: oklch(var(--su));
+	--success-content-color: oklch(var(--suc));
+	--warning-color: oklch(var(--wa));
+	--warning-content-color: oklch(var(--wac));
+	--error-color: oklch(var(--er));
+	--error-content-color: oklch(var(--erc));
 }
 
 details > summary {
@@ -13,7 +34,7 @@ details > summary {
 }
 
 div.theme-card:active {
-    @apply scale-95;
+	@apply scale-95;
 }
 
 div.theme-card:hover {
@@ -21,7 +42,7 @@ div.theme-card:hover {
 }
 
 div.theme-card.selected {
-    border-bottom-color: var(--bg-accent);
+	border-bottom-color: var(--bg-accent);
 	border-right-color: var(--bg-accent);
 }
 
