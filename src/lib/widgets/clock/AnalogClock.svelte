@@ -53,7 +53,7 @@
 	}
 
 	.major {
-		stroke: var(--base-color-300);
+		stroke: var(--neutral-color);
 		stroke-width: 1;
 	}
 
